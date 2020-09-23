@@ -89,3 +89,7 @@ https://classroom.github.com/a/y2_tqe0e
 mit Asccidoctor Template: https://github.com/htl-leonding-college/asciidoctor-docker-template
 
 
+GH Pages:
+https://2021-4ahif-syp.github.io/<repository-name>
+
+z.B: https://2021-4ahif-syp.github.io/assigment-01-projektantrag-mwllgr/
