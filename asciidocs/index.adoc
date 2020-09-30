@@ -82,7 +82,7 @@ https://htl-leonding-college.github.io/syp-itp-lecture-notes/sypitp4.html#_proje
 
 == 2020-09-22
 
-=== Erstellung Projektantrag
+=== Projektantrag / Project Proposal
 
 https://classroom.github.com/a/y2_tqe0e
 
@@ -93,3 +93,170 @@ GH Pages:
 https://2021-4ahif-syp.github.io/<repository-name>
 
 z.B: https://2021-4ahif-syp.github.io/assigment-01-projektantrag-mwllgr/
+
+.Project Proposal - Projektantrag
+[%collapsible%open]
+//[%collapsible]
+====
+[cols="1,3,5,5"]
+|===
+|lfd.Nr. |Name |Thema |Feedback
+
+|{counter:usage}
+|Daniel
+|Digital Signage (siehe Eggman)
+|ngd(5)
+
+|{counter:usage}
+|Kawasaki
+|Feedback Survey
+|ngd(5)
+
+|{counter:usage}
+|Benjamin Musikfreund 1
+|Turnierverwaltung
+|korr. bef(3)
+
+|{counter:usage}
+|Paul
+|n/a
+|ngd(5)
+
+|{counter:usage}
+|Jonas die Birke
+|FinanceCheck
+|ngd(5)
+
+|{counter:usage}
+|Nico
+|siehe Jonas die Birke
+|ngd(5)
+
+|{counter:usage}
+|Benjamin Eggman
+|DigitalSignage - On-Demand Videos
+|ngd(5)
+
+|{counter:usage}
+|Moritz Brille
+|Freiwillige Feuerwehr
+|icon:uncheck[]bef(3)
+
+|{counter:usage}
+|Lorenzius
+|Digital Price Tag
+|gen(4)
+
+|{counter:usage}
+|Lukas H
+|Rocketman
+|ngd(5)
+
+|{counter:usage}
+|Duke Ellington
+|Smart School
+|icon:uncheck[]ngd(5)
+
+|{counter:usage}
+|Tarik Tarik
+|Turnierverwaltung
+|icon:uncheck[]gen(4)
+
+|{counter:usage}
+|David Musikfreund 2
+|Lagerverwaltung
+|icon:uncheck[]gen(4)
+
+|{counter:usage}
+|Jan Händler
+|Rocketman
+|icon:uncheck[]ngd(5)
+
+|{counter:usage}
+|Vinzent K
+|Terminkalender
+|icon:uncheck[]gen(4)
+
+|{counter:usage}
+|Muammar
+|Fitness Studio
+|icon:uncheck[]ngd(5)
+
+|{counter:usage}
+|Marcel die Ecke
+|Rocketman
+|icon:uncheck[]ngd(5)
+
+|{counter:usage}
+|Moritz ohne Brille
+|easyschool
+|icon:uncheck[]gen(4)
+
+|{counter:usage}
+|Jimmy
+|Kassasystem
+|icon:uncheck[]gen(4)
+
+|{counter:usage}
+|Roberto
+|Bank Account Manager
+|icon:uncheck[]gen(4)
+
+|{counter:usage}
+|Felix der Große
+|Buffet-Anwesenheitsampel
+|icon:uncheck[]bef(3)
+
+|{counter:usage}
+|Eminem
+|Event Organizer
+|ngd(5)
+
+|{counter:usage}
+|Bocki Musikfreund 3
+|BetAtSchool
+|ngd(5)
+
+|{counter:usage}
+|Patrick
+|ngd(5)
+|icon:uncheck[]
+
+|{counter:usage}
+|Fabian Woody
+|Bibliothek
+|ngd(5)
+
+|{counter:usage}
+|Philip Cokeman
+|ngd(5)
+|icon:uncheck[]
+
+|{counter:usage}
+|Marc Krimiman
+|SIP Phones
+|icon:uncheck[]gut(2)
+
+|===
+
+====
+
+==== Projektauftrag / Project Charter
+
+==== Pflichtenheft / System Specification
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
