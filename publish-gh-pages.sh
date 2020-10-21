@@ -16,6 +16,23 @@ git push --force origin master:gh-pages
 cd $OLD
 rm -rf $BUILD_DIR
 
+# echo gh-pages url
+# https://github.com/htl-leonding-college/git-lecture-notes.git
+# --> https://htl-leonding-college.github.io/git-lecture-notes/
+# https://stackoverflow.com/a/965072
+IFS='/' read -ra TEMP <<< "$ORIGIN_URL"
+#for i in "${TEMP[@]}"; do
+#    # process "$i"
+#    echo "$i"
+#done
+REPO_NAME=${TEMP[4]}
+echo
+echo "***********************************************************"
+echo created gh-pages under following url
+echo https://${TEMP[3]}.github.io/${REPO_NAME%.*}
+echo "***********************************************************"
+
+
 # Sources:
 # maybe better with subtrees -> https://gist.github.com/cobyism/4730490
 # https://blog.bloomca.me/2017/12/15/how-to-push-folder-to-github-pages.html

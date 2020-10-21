@@ -20,7 +20,57 @@ endif::backend-html5[]
 // print the toc here (not at the default position)
 //toc::[]
 
+.Project Teams
+[%collapsible%open]
+//[%collapsible]
+====
+* Rocketman -> Prof. B. Ernecker
+** 14 Jan Händler
+** 17 Marcel St. Martin
+** 10 Lukas Hörnchen
 
+* link:resources/duennschichtchromatogramm.pdf[Dünnschichtchromatogramm, window="_blank"] -> Prof. B. Ernecker
+
+* Drohne
+** 11 Duke Ellington
+** 4 Paulchen Panther
+** 2 Ballkarawane
+
+* School-IoT "The appealing classroom"
+** 21 Felix der Große
+** 15 Vinzent K
+** 20 Roberto
+
+* LeoSchool -> derzeit Diplomarbeit
+** 3 Musikfreund 1
+** 13 Musikfreund 2
+** 23 Musikfreund 3
+** 19 Jimmy
+
+* LeoTurnier
+** 9 Lorenzius
+** 12 Tarik Tarik
+** 5 Jonas die Birke
+** 6 Nico
+
+* LeoDatabaseLearner
+** 24 Patrick
+** 16 Muammar
+
+* DigitalSignage - On-Demand Videos
+** 7 Eggman
+** 1 Daniel
+
+* Kubernetes Provision Tool
+** 27 Krimiman
+** 8 Moritz mit Brille
+** 22 Eminem
+** 18 Moritz ohne Brille
+
+* LeoSurvey
+** 25 TF
+** 26 TP
+====
 
 == 2020-09-21
 
@@ -94,9 +144,9 @@ https://2021-4ahif-syp.github.io/<repository-name>
 
 z.B: https://2021-4ahif-syp.github.io/assigment-01-projektantrag-mwllgr/
 
-.Project Proposal - Projektantrag
-[%collapsible%open]
-//[%collapsible]
+.Project Proposal - Grades
+//[%collapsible%open]
+[%collapsible]
 ====
 [cols="1,3,5,5"]
 |===
@@ -140,7 +190,7 @@ z.B: https://2021-4ahif-syp.github.io/assigment-01-projektantrag-mwllgr/
 |{counter:usage}
 |Moritz Brille
 |Freiwillige Feuerwehr
-|icon:uncheck[]bef(3)
+|icon:uncheck[]korr. bef(3)
 
 |{counter:usage}
 |Lorenzius
@@ -245,9 +295,253 @@ z.B: https://2021-4ahif-syp.github.io/assigment-01-projektantrag-mwllgr/
 
 ==== Pflichtenheft / System Specification
 
+== 2020-10-05
+
+=== Exkurs Git
+
+==== central vs. distributed vcs
+
+.centralized vcs
+[plantuml,centralvcs,png]
+----
+@startuml
+rectangle "centralized vcs" as vcs
+actor basti
+actor luki
+actor edina
+edina -up- vcs
+basti -- vcs
+luki -up-vcs
+@enduml
+----
+
+* Single-point-of-failure
+
+.distributed vcs
+[plantuml,distributedvcs,png]
+----
+@startuml
+rectangle "remote vcs" as vcs
+rectangle "local repo" as repo1
+rectangle "local repo" as repo2
+rectangle "local repo" as repo3
+
+actor basti
+actor luki
+actor edina
+edina -up- repo1
+basti -- repo3
+luki -up-repo2
+
+repo1 -up- vcs
+repo2 -up- vcs
+repo3 -- vcs
+@enduml
+----
+
+== 2020-10-06
+
+Vortrag "School-IoT" von Prof. G.Köck
+
+* MQTT
+** Einsatzgebiet
+** Vor- und Nachteile
+** Publish-Subscribe-Pattern
+** Quality of Service
+
+
+== Einteilung Projekte 20/21
+
+=== Projektthemen 20/21
+
+.Project Topics
+//[%collapsible%open]
+[%collapsible]
+====
+
+////
+* Rocketman -> Prof. B. Ernecker
+** Jan Händler
+** Kawasaki
+** Lukas Hörnchen
+* link:resources/duennschichtchromatogramm.pdf[Dünnschichtchromatogramm, window="_blank"] -> Prof. B. Ernecker
+** Jimmy
+** Roberto
+* School-IoT "The appealing classroom"
+** Felix der Große
+** Vinzent K
+** Paul
+* LeoSchool -> derzeit Diplomarbeit
+** Musikfreund 1
+** Musikfreund 2
+** Musikfreund 3
+* LeoTurnier
+** Lorenzius
+** Tarik Tarik
+** Jonas die Birke
+** Nico
+* LeoDatabaseLearner
+** Patrick
+** Muammar
+* DigitalSignage - On-Demand Videos
+** Eggman
+** Duke Ellington
+** Daniel
+* Kubernetes Provision Tool
+** Krimiman
+** Moritz mit Brille
+** Eminem
+** Moritz ohne Brille
+////
+
+|===
+|Projektbez. |Team |Auftraggeber / Ansprechpartner |Anmerkungen
+
+|Rocketman
+a|
+//  Jan Händler
+* 14 KJ
+* 17 PM
+// Lukas Hörnchen
+* 10 HL
+|Prof. B. Ernecker
+|
+
+|link:resources/duennschichtchromatogramm.pdf[Dünnschicht-chromatogramm, window="_blank"]
+a|
+//  Jimmy
+* 19 RY
+
+|Prof. B. Ernecker
+|
+
+|School-IoT
+a|
+//  Felix der Große
+* 21 RF
+// Vinzent K
+* 15 KV
+// Paul
+*  4 BP
+//  Roberto
+* 20 RR
+| Prof. G. Köck
+|"The appealing classroom"
+
+|LeoSchool
+a|
+//  Musikfreund 1
+*  3 BB
+//  Musikfreund 2
+* 13 ID
+//  Musikfreund 3
+* 23 SB
+| T.Stütz
+|-> derzeit Diplomarbeit
+|LeoTurnier
+a|
+//  Lorenzius
+*  9 GL
+//  Tarik Tarik
+* 12 HT
+//  Jonas die Birke
+*  5 BJ
+//  Nico
+*  6 BN
+|T.Stütz
+|bereits Projekt vorhanden
+
+|LeoDatabaseLearner
+a|
+//  Patrick
+* 24 SP
+//  Muammar
+* 16 ÖM
+|
+|
+
+|On-Demand Videos
+a|
+//  Daniel
+*  1 AD
+//  Eggman
+*  7 EB
+//  Duke Ellington
+* 11 HN
+|
+|-> Bereich "DigitalSignage"
+
+|Kubernetes Provision Tool
+a|
+//Krimiman
+* 27 WM
+// Moritz mit Brille
+*  8 EM
+// Eminem
+* 22 SE
+// Moritz ohne Brille
+* 18 PM
+|
+|Prof.C.Aberger
+|===
 
 
 
+====
+
+== 2020-10-19
+
+* Automasiertes Testen
+** https://github.com/rest-assured/rest-assured/wiki/Usage[RESTassured]
+** Assert-J core
+** @QuarkusTest
+** @Context
+** Verwendung eines Loggers
+* Response Codes bei REST
+
+
+== 2020-10-20
+
+https://htl-leonding-college.github.io/git-lecture-notes/
+
+=== .gitignore
+=== add, commit, rm, ...
+
+=== File aus der staging area löschen
+
+[source,shell]
+----
+git restore --staged . # <.>
+git restore --staged <file(s)>
+----
+
+<.> Sämtliche Files werden aus der Staging Area gelöscht
+
+
+=== Zurücknehmen der lokalen Änderungen
+
+[source,shell]
+----
+git restore .
+git restore <file(s)>
+----
+
+** neu erstellte Files werden nicht automatisch gelöscht, sondern verbleiben untracked in der working copy
+** diese Files müssen separat glöscht erden
+
+
+[source,shell]
+----
+git clean -fd
+----
+
+* -f ... force
+* -d ... directories
+
+
+
+=== Detached Head
+https://htl-leonding-college.github.io/git-lecture-notes/#_detached_head[Detached Head on Git-Lecture-Notes, window="_blank"]
 
 
 
