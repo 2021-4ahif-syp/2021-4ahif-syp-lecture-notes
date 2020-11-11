@@ -544,9 +544,9 @@ git clean -fd
 https://htl-leonding-college.github.io/git-lecture-notes/#_detached_head[Detached Head on Git-Lecture-Notes, window="_blank"]
 
 
+== 2020-11-10
 
-
-
+Einrichten der Repos und GitHub Projects
 
 
 
