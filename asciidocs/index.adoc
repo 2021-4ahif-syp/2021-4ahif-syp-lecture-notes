@@ -491,7 +491,7 @@ a|
 
 == 2020-10-19
 
-* Automasiertes Testen
+* Automatisiertes Testen
 ** https://github.com/rest-assured/rest-assured/wiki/Usage[RESTassured]
 ** Assert-J core
 ** @QuarkusTest
@@ -549,8 +549,16 @@ https://htl-leonding-college.github.io/git-lecture-notes/#_detached_head[Detache
 Einrichten der Repos und GitHub Projects
 
 
+== 2020-11-16
 
+=== Benotung der Pflichtenhefte
 
+IMPORTANT: aus der Sicht des Kunden beschreiben
 
-
+* Es sind die Geschäftsprozesse zu ermitteln
+** Was kann der Kunde mit dem System machen?
+* Das zu erstellende System ist zunächst überblicksmäßig zu beschreiben
+** erst anschließend die einzelnen Komponenten im Detail
+* Der Kunde möchte meist auch die GUI schon im Vorfeld sehen
+** grober Entwurf der GUI zB mit Bleistiftzeichnung
 

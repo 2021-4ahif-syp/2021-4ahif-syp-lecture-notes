@@ -1,0 +1,149 @@
+= Grading System Specification
+firstname lastname
+1.1.0, 2020-11-16: 3ahif
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// https://fontawesome.com/v4.7.0/icons/
+//icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/asciidoctor-docker-template/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
+//icon:github-square[link=https://github.com/htl-leonding-college/asciidoctor-docker-template] ‏ ‏ ‎
+//icon:home[link=https://htl-leonding.github.io/]
+endif::backend-html5[]
+
+// print the toc here (not at the default position)
+//toc::[]
+
+== Projektteams
+
+|===
+|Projektbez. |Team |Auftraggeber / Ansprechpartner |Anmerkungen
+
+|Rocketman
+a|
+//  Jan Händler
+* 14 KJ
+* 17 PM
+// Lukas Hörnchen
+* 10 HL
+|Prof. B. Ernecker
+|
+
+|School-IoT
+a|
+//  Felix der Große
+* 21 RF
+// Vinzent K
+* 15 KV
+// Paul
+*  4 BP
+//  Roberto
+* 20 RR
+| Prof. G. Köck
+|"The appealing classroom"
+
+|LeoSchool
+a|
+//  Musikfreund 1
+*  3 BB
+//  Musikfreund 2
+* 13 ID
+//  Musikfreund 3
+* 23 SB
+// Jimmy
+* 19 YR
+| T.Stütz
+|-> derzeit Diplomarbeit
+|LeoTurnier
+a|
+//  Lorenzius
+*  9 GL
+//  Tarik Tarik
+* 12 HT
+//  Jonas die Birke
+*  5 BJ
+//  Nico
+*  6 BN
+|T.Stütz
+|bereits Projekt vorhanden
+
+|LeoDatabaseLearner
+a|
+//  Patrick
+* 24 SP
+//  Muammar
+* 16 ÖM
+|
+|
+
+|On-Demand Videos
+a|
+//  Daniel
+*  1 AD
+//  Eggman
+*  7 EB
+//  Duke Ellington
+* 11 HN
+|
+|-> Bereich "DigitalSignage"
+
+|Kubernetes Provision Tool
+a|
+//Krimiman
+* 27 WM
+// Moritz mit Brille
+*  8 EM
+// Eminem
+* 22 SE
+// Moritz ohne Brille
+* 18 PM
+|
+|Prof.C.Aberger
+
+|LeoSurvey
+a|
+//Tischler
+* 25 TF
+// Trinkl
+* 26 TP
+|
+|
+|===
+
+== Grading
+
+=== Rocketman
+
+* [x] gh-pages funktionieren
+
+==== Inhaltlich
+** Motivation
+* Warum wird Projekt durchgeführt
+
+* In der Ausgangssituation ist bereits Istzustand enthalten
+* Istzustand beschreibt unzureichend die Situation
+* Im Istzustand müsste derzeit
+** Hardware
+** Software beschrieben sein
+
+Die funktionalen Anforderungen sind ungenügend
+
+
+=== Drone
+
+Pflichtenheft nur ansatzweise vorhanden
+
+
+
+
+
+
+
+
+
