@@ -562,3 +562,22 @@ IMPORTANT: aus der Sicht des Kunden beschreiben
 * Der Kunde möchte meist auch die GUI schon im Vorfeld sehen
 ** grober Entwurf der GUI zB mit Bleistiftzeichnung
 
+== 2020-11-17
+
+=== Projektbesprechung Franklyn
+
+=== Projektbesprechung IoT
+
+=== Projektbesprechung DatabaseLearner
+
+
+
+
+
+
+
+
+
+
+
+
