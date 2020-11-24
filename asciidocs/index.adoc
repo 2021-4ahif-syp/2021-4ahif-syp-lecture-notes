@@ -571,13 +571,114 @@ IMPORTANT: aus der Sicht des Kunden beschreiben
 === Projektbesprechung DatabaseLearner
 
 
+== 2020-11-23
+
+=== Projektbesprechung School-IoT
+
+=== Projektbesprechung Beeyond
 
 
+* Am 24.11.2020 wird durchgemacht
+** BDD mit Karate als Testframework
+** Wdhlg. Use-Case-Diagramme
+** V-Modell
+** Gliederung Pflichtenheft
+*** FA vs NFA
 
 
+== 2020-11-24
+
+image:leistungsziele.png[]
+
+* Zielarten
+** Wirkungssziele
+** Ergebnisziele
+** Prozessziele
+
+https://www.wirkung-lernen.de/wirkung-planen/ziele/erarbeiten/
+
+image:vmodell.png[]
 
 
+=== Behaviour Driven Design - BDD (Karate & Gherkin)
+
+* Konzept: BDD
+** aus der sicht des Kunden werden die Tests erstellt
+
+=== Karate
+
+image:karate-overview.png[]
+
+https://github.com/intuit/karate
+
+.Erstellen des Projekts
+----
+mvn io.quarkus:quarkus-maven-plugin:1.9.2.Final:create \
+    -DprojectGroupId=at.htl \
+    -DprojectArtifactId=quarkus-karate-demo \
+    -DclassName="at.htl.karate.boundary.GreetingResource" \
+    -Dpath="/hello"
+----
+
+.pom.xml
+[source,xml]
+----
+    <dependency>
+      <groupId>com.intuit.karate</groupId>
+      <artifactId>karate-apache</artifactId>
+      <version>0.9.6</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.intuit.karate</groupId>
+      <artifactId>karate-junit5</artifactId>
+      <version>0.9.6</version>
+      <scope>test</scope>
+    </dependency>
+    ...
+
+  <build>
+    <testResources>
+      <testResource>
+        <directory>src/test/java</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </testResource>
+    </testResources>
+    <plugins>
+    ...
+    </plugins>
+  ...
+  </build>
+----
+
+.src/test/java/karate-config.js
+[source,javascript]
+----
+function fn() {
+    var env = karate.env; // get java system property 'karate.env'
+    karate.log('karate.env system property was:', env);
+    if (!env) {
+        env = 'dev'; // a custom 'intelligent' default
+    }
+    var config = { // base config JSON
+        baseUrl: 'http://localhost:8081'
+    };
+    // don't waste time waiting for a connection or if servers don't respond within 5 seconds
+    karate.configure('connectTimeout', 5000);
+    karate.configure('readTimeout', 5000);
+    return config;
+}
+----
 
 
+=== Aufgabe Karate
 
-
+* Erstelle einen Endpoint mit einem PathParameter
+** localhost:8080/hello/susi ergibt einen Rückgabewert "hello susi"
+** einmal als plain text, einmal als xml und einmal als json
+* Erstellen einer Entität Vehicle mit brand und type
+** Create eines Vehicles über Endpoint
+** Das Vehicle ist ein File
+** siehe dazu https://github.com/htl-leonding-college/quarkus-karate-testcontainers-demo
