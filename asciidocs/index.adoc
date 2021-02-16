@@ -591,7 +591,7 @@ IMPORTANT: aus der Sicht des Kunden beschreiben
 image:leistungsziele.png[]
 
 * Zielarten
-** Wirkungssziele
+** Wirkungsziele
 ** Ergebnisziele
 ** Prozessziele
 
@@ -600,7 +600,7 @@ https://www.wirkung-lernen.de/wirkung-planen/ziele/erarbeiten/
 image:vmodell.png[]
 
 
-=== Behaviour Driven Design - BDD (Karate & Gherkin)
+=== Behaviour Driven Development - BDD (Karate & Gherkin)
 
 * Konzept: BDD
 ** aus der sicht des Kunden werden die Tests erstellt
@@ -681,4 +681,60 @@ function fn() {
 * Erstellen einer Entität Vehicle mit brand und type
 ** Create eines Vehicles über Endpoint
 ** Das Vehicle ist ein File
+* Erstellen Sie dazugehörige Karate-Tests
 ** siehe dazu https://github.com/htl-leonding-college/quarkus-karate-testcontainers-demo
+
+
+== 2020-12-14
+
+
+== 2021-02-16
+
+=== Was ist für eine Diplomarbeit geeignet?
+
+. kleine Prototypen für einen organisatorischen Ablauf zB Einlesen von EAN-Codes auf Paketen mit Android Brille
+. kleiner Prototyp für eine neue Technologie zB Webshop in Angular, Vue, Svelte, ...
+. ein eher für die Firma nicht so wichtiges Projekt (nice-to-have):
+.. Essensanmeldung für Kantine
+
+=== Diplomarbeit - Gliederung
+
+. Theorieteil
+.. Beschreiben der Technologien (wird erst zum Schluss der Arbeit gemacht)
+. Praktischen Teil
+.. Ausgangssituation
+.. Istzustand
+.. Problemstellung
+.. Aufgabenstellung
+.. Ziele (Leistungswirkung)
+.. Marktanalyse
+.. Entwurfsentscheidungen +
+mit Kriterienkatalog
+.. Systemarchitektur und Entwurf
+.. Ausgewählte Aspekte und Probleme +
+Was habe ich besonders gut gemacht, wo hatten wir Probleme und wie lösten wir diese
+.. Resumee
+... Was habe ich gelernt ...
+.... bezüglich Zeiteinteilung
+.... Zusammenarbeit mit Kollegen
+.... Zusammenarbeit mit Firmen
+... Selbstreflexion der Arbeit
+.. Aufteilung der Arbeit nach Teammitgliedern +
+zB Gliederung mit den Namen derjenigen, die das jeweilige Kapitel verfasst haben
+.. Literaturverzeichnis (irgendeinen Standar wählen zB Harvard Zitierung) +
+https://www.itcp.kit.edu/wilhelm/download/Zitieren-in-wissenschaftlichen-Texten.pdf
+.. und andere Verzeichnisse
+
+=== Diplomarbeit - Durchführung
+
+. Gliederung erstellen
+. Mit den schwierigen Kapitel beginnen
+. Nicht sofort die Sätze ausformulieren,
+. sondern zuerst nur Codes, Tabellen, Diagramm und Stichworte schreiben +
+Stichwort: die Argumentationslinie nicht verlieren
+. Immer gleich die Quellen (bei Links mit Datum) im Text angeben zB in eckigen Klammern
+. Wenn man eine interessante Quelle findet, glich in die Arbeit eintragen
+
+
+
+
