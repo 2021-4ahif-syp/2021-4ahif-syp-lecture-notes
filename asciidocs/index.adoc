@@ -737,4 +737,50 @@ Stichwort: die Argumentationslinie nicht verlieren
 
 
 
+== 2021-03-08
+
+[plantuml,cld,png]
+----
+@startuml
+left to right direction
+
+class Match
+
+class Player
+
+class Team
+
+class Event
+
+class EventType
+note left: YELLOW\nRED\nGOAL\nPENALTY\n...
+
+Match --> Team : home team
+Match --> Team : guest team
+Match -- Event
+Event "*" -up-> "1" EventType
+Player -- Team
+Event -- Player
+
+
+@enduml
+----
+
+== 2021-04-13
+
+* Schichtbetrieb
+
+=== Docker Einführung
+
+image:docker-lightweight-virt.png[]
+
+image:docker-image-container.png[]
+
+
+
+
+
+
+
+
 
