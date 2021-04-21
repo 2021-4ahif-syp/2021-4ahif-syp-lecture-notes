@@ -766,7 +766,7 @@ Event -- Player
 @enduml
 ----
 
-== 2021-04-13
+== 2021-04-12
 
 * Schichtbetrieb
 
@@ -777,9 +777,26 @@ image:docker-lightweight-virt.png[]
 image:docker-image-container.png[]
 
 
+== 2021-04-13
+
+=== Projektbesprechung IoT
+
+* das Team gibt an am Simulator zu arbeiten
+** Implementierung lt. Team fertig
+** es wird an der Dokumentation gearbeitet
+** Kommentar Stütz:
+*** es gibt im Projekt nur *einen* Task.
+*** die Konfiguration (MQTT-Server-Adresse) ist nur im Code als Variable enthalten
+    -> diese Daten sind in der application.properties einzutragen
+    -> die Anwendung ist mit Environment Variablen zu konfigurieren
+*** Es arbeitet nur ein Teammitglied am Simulator
 
 
+== 2021-04-19
 
+=== Docker
+
+bis docker-compose
 
 
 
