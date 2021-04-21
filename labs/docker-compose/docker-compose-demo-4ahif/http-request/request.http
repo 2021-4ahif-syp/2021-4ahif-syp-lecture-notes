@@ -1,0 +1,8 @@
+POST {{host}}/hello
+Content-Type: application/json
+
+{
+  "name": "Susi"
+}
+
+###

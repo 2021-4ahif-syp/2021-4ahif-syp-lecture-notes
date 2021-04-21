@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  quarkus:
+    build: .
+    ports:
+      - '8082:8080'
+  postgres:
+    image: postgres:13.2
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+      POSTGRES_DB: db
