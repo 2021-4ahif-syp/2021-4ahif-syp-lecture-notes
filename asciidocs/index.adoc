@@ -798,6 +798,7 @@ image:docker-image-container.png[]
 
 bis docker-compose
 
+* Beispiel: https://github.com/2021-4ahif-syp/2021-4ahif-syp-lecture-notes/tree/master/labs/docker-compose/docker-compose-demo-4ahif[docker-compose mit quarkus, window="_blank"]
 
 
 
