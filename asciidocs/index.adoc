@@ -792,13 +792,22 @@ image:docker-image-container.png[]
 *** Es arbeitet nur ein Teammitglied am Simulator
 
 
-== 2021-04-19
+== 2021-04-19 Gruppe A
 
 === Docker
 
 bis docker-compose
 
 * Beispiel: https://github.com/2021-4ahif-syp/2021-4ahif-syp-lecture-notes/tree/master/labs/docker-compose/docker-compose-demo-4ahif[docker-compose mit quarkus, window="_blank"]
+
+
+== 2021-04-26 Gruppe B
+
+docker-compose fertig
+
+* Beispiel https://github.com/htl-leonding/docker-compose-demo-4ahif-grb[docker-compose mit quarkus Gruppe B, window="_blank"]
+
+
 
 
 
