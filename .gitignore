@@ -8,3 +8,6 @@ gh-pages
 /asciidocs/.asciidoctor/
 /Zugangsdaten.txt
 .DS_Store
+
+*.iml
+.idea/
