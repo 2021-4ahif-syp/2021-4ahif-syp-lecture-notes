@@ -808,6 +808,6 @@ docker-compose fertig
 * Beispiel https://github.com/htl-leonding/docker-compose-demo-4ahif-grb[docker-compose mit quarkus Gruppe B, window="_blank"]
 
 
-
+* Hrn Hain fragen, dass er docker-compose Beispiel erklärt
 
 
