@@ -810,4 +810,200 @@ docker-compose fertig
 
 * Hrn Hain fragen, dass er docker-compose Beispiel erklärt
 
+== 2021-05-17
+
+=== Youtrack Benutzung
+
+* Agile Boards
+* VCS Integration
+
+=== Scrum - Wiederholung
+
+* V-Modell
+
+=== Karate
+
+* Karate begonnen
+
+=== Quarkus Profile
+
+* microprofile config
+
+== 2021-05-25 - Karate Test-Framework
+
+* https://intuit.github.io/karate/#karate[Karate Testframework, window="_blank"]
+* https://en.wikipedia.org/wiki/Karate_(software)
+
+****
+GIt-Repo for live coding: https://github.com/htl-leonding/karate-demo-4ahif-2021
+****
+
+
+=== Erstellen eines Quarkus - Projekts
+
+----
+mvn io.quarkus:quarkus-maven-plugin:1.13.4.Final:create -e \
+    -DprojectGroupId=at.htl.demo \
+    -DprojectArtifactId=demo \
+    -DclassName="at.htl.demo.boundary.VehicleEndpoint" \
+    -Dpath="/demo" \
+    -Dextensions="resteasy, resteasy-jsonb, smallrye-openapi"
+----
+
+=== Exkurs: Test-Frameworks
+
+
+|===
+|SDLC-Phase |Framework
+
+|Unit-Testing
+|JUnit, AssertJ, Hamcrest, (TestNG, Spock)
+
+|Integration-Testing
+|JUnit, AssertJ, Hamcrest, Mockito, JMock
+
+|System-Testing
+a|
+*REST*: RESTassured, Karate, Jersey-Client, Jasmin +
+*GUI*: Selenium, Karma, Karate, (SikuliX), Selenide
+
+|Abnahmetesten / Akzeptanztest
+|wird durch den Kunden durchgeführt
+
+|===
+
+=== Erstellen des zu testenden Endpoints
+
+.Tragen Sie sowohl in der pom.xml als auch in den Settings beim Java-Compiler Version 16 für Java ein, um den Textblock zu benutzen
+[source,java]
+----
+package at.htl.demo.boundary;
+
+import ...
+
+@Path("/demo")
+public class VehicleEndpoint {
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public String hello() {
+        return """
+               {
+                  "brand":"Opel",
+                  "type":"Admiral"
+               }
+               """;
+    }
+
+    @POST
+    public Response post(@Context UriInfo uriInfo, String text) {
+        System.out.println(text);
+        URI uri = uriInfo.getAbsolutePathBuilder().path("42").build();
+        return Response.created(uri).build();
+    }
+}
+----
+
+=== Konfigurieren von Karate
+
+* Eintragen der maven-Dependency
+* <testResources>-Element in <build>-Element in pom.xml eintragen
+* `karate-config.js` in `src/test/java` erstellen
+
+[source,javascript]
+----
+function fn() {
+    var env = karate.env; // get java system property 'karate.env'
+    karate.log('karate.env system property was:', env);
+    if (!env) {
+        env = 'dev'; // a custom 'intelligent' default
+    }
+    var config = { // base config JSON
+        baseUrl: 'http://localhost:8081',
+    };
+
+    // don't waste time waiting for a connection or if servers don't respond within 5 seconds
+    karate.configure('connectTimeout', 5000);
+    karate.configure('readTimeout', 5000);
+    return config;
+}
+----
+
+=== Aufrufen des Karate Tests
+
+[source,java]
+----
+package at.htl.demo.boundary;
+
+import com.intuit.karate.junit5.Karate;
+import io.quarkus.test.junit.QuarkusTest;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.is;
+
+@QuarkusTest
+public class VehicleEndpointTest {
+
+    @Karate.Test
+    Karate testVehicle() {
+        return Karate.run("vehicle").relativeTo(getClass());
+    }
+
+}
+----
+
+
+=== Feature-File for Karate
+
+Das .feature-File ist in https://cucumber.io/docs/gherkin/reference/[Gherkin, window="_blank"] geschrieben.
+Gerkin wurde ursprünglich für https://de.wikipedia.org/wiki/Cucumber_(Software)[Cucumber] entwickelt.
+https://intuit.github.io/karate/#karate[Karate, window="_blank"] nutzt die Gherkin-Notation, hat aber sonst mit Cucumber nichts zu tun.
+
+****
+* *Gherkin* wird zur textuellen Spezifikation von Anforderungen an Software benutzt.
+* Die automatisierte Überprüfung dieser Beschreibung erfolgt durch https://en.wikipedia.org/wiki/Karate_(software)[*Karate*, window=blank].
+
+Quelle: https://de.wikipedia.org/wiki/Cucumber_(Software)[wikipedia, window="_blank"]
+****
+
+[source,gherkin]
+----
+Feature: Get infos about our vehicles
+
+  Background:
+    * url baseUrl
+
+  Scenario: Show single car
+    Given path 'demo'
+    And header Content-Type = 'application/json'
+    When method GET
+    Then status 200
+    And match response ==
+    """
+     {
+        "type":"Admiral",
+        "brand":"Opel"
+     }
+    """
+
+  Scenario: Create a car
+    Given path 'demo'
+    And header Content-Type = 'application/json'
+    And request { "type":"Admiral", "brand":"Opel" }
+    When method POST
+    Then status 201
+    And print responseHeaders
+----
+
+[plantuml]
+----
+include::plantuml/ucd.puml[]
+----
+
+* Das Szenario im Feature File entspricht einem Use Case im UCD
+** Man könnte ev. auch eine Feature aus dem Feature File einem Szenario aus einem UCD zuordnen
+** zB show card infos
+** die einzelnen Szenarien im Feature File bilden nun die einzelen Testfälle (normale Durchführung, Workarounds, Fehlschläge, ...) ab
 
